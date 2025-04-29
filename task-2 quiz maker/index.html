@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Quiz Maker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Online Quiz Maker</h1>
+            <div class="mode-toggle">
+                <button id="creator-mode-btn">Quiz Creator</button>
+                <button id="taker-mode-btn">Quiz Taker</button>
+            </div>
+        </header>
+
+        <main>
+            <!-- Quiz Creator Section -->
+            <section id="quiz-creator" class="active">
+                <h2>Create a New Quiz</h2>
+                <div class="quiz-form">
+                    <div class="form-group">
+                        <label for="quiz-title">Quiz Title:</label>
+                        <input type="text" id="quiz-title" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="quiz-description">Description:</label>
+                        <textarea id="quiz-description" rows="3"></textarea>
+                    </div>
+                    
+                    <div id="questions-container">
+                        <!-- Questions will be added here dynamically -->
+                    </div>
+                    
+                    <button id="add-question-btn" class="btn">Add Question</button>
+                    <button id="save-quiz-btn" class="btn primary">Save Quiz</button>
+                </div>
+                
+                <div id="saved-quizzes">
+                    <h3>Your Saved Quizzes</h3>
+                    <div id="quizzes-list">
+                        <!-- Saved quizzes will appear here -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Quiz Taker Section -->
+            <section id="quiz-taker">
+                <h2>Take a Quiz</h2>
+                <div id="available-quizzes">
+                    <h3>Available Quizzes</h3>
+                    <div id="quizzes-to-take">
+                        <!-- Available quizzes will appear here -->
+                    </div>
+                </div>
+                
+                <div id="quiz-taking-area" class="hidden">
+                    <h3 id="current-quiz-title"></h3>
+                    <p id="current-quiz-description"></p>
+                    
+                    <div id="quiz-questions-container">
+                        <!-- Quiz questions will appear here -->
+                    </div>
+                    
+                    <button id="submit-quiz-btn" class="btn primary">Submit Quiz</button>
+                    <button id="back-to-quizzes-btn" class="btn">Back to Quizzes</button>
+                </div>
+                
+                <div id="quiz-results" class="hidden">
+                    <h3>Quiz Results</h3>
+                    <p id="score-display"></p>
+                    <div id="answers-review">
+                        <!-- Answers review will appear here -->
+                    </div>
+                    <button id="take-another-btn" class="btn primary">Take Another Quiz</button>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
